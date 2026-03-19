@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript - Portfolio</title>
+  <link rel="stylesheet" href="css/shared-styles.css">
+  <link rel="stylesheet" href="css/javascript.css">
+  <style>
+  
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>JavaScript - Interactivity & Logic</h1>
+      <p>Adding dynamic behavior and interactivity to web pages</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html">Home</a>
+      <a href="fullstack-development.html">Full Stack Development</a>
+      <a href="html.html">HTML</a>
+      <a href="css.html">CSS</a>
+      <a href="bootstrap.html">Bootstrap</a>
+      <a href="javascript.html">JavaScript</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <section>
+        <div class="section-title">
+          <h2>Understanding JavaScript</h2>
+          <p>The programming language that brings web pages to life with interactivity</p>
+        </div>
+
+        <div class="card">
+          <h3>What is JavaScript?</h3>
+          <p>
+            JavaScript is a programming language that runs in web browsers to make web pages interactive.
+            It allows you to respond to user actions (clicks, typing, scrolling), modify content, validate forms,
+            perform calculations, and communicate with servers.
+          </p>
+          <p>
+            Without JavaScript, websites would be static - unable to respond to user input or change dynamically.
+            JavaScript is essential for modern web development.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>JavaScript Basics</h3>
+          <p>These core concepts form the foundation of JavaScript. Understanding them makes it easier to read, write, and debug code.</p>
+          <ul class="feature-list">
+            <li><strong>Variables:</strong> Store and update values. Use <code>const</code> for constants and <code>let</code> when the value can change.</li>
+            <li><strong>Data Types:</strong> Includes strings, numbers, booleans, arrays, and objects; each type behaves differently in operations.</li>
+            <li><strong>Functions:</strong> Wrap reusable logic into named actions. Functions can accept inputs (parameters) and return results.</li>
+            <li><strong>Events:</strong> Let code respond to user actions like clicks, typing, and form submission.</li>
+            <li><strong>DOM Manipulation:</strong> JavaScript can read and update HTML elements (text, attributes, styles) to change the page dynamically.</li>
+            <li><strong>Control Flow:</strong> Use <code>if/else</code> and loops (<code>for</code>, <code>while</code>) to make decisions and repeat actions.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Common JavaScript Concepts</h3>
+
+          <h4 style="color: var(--primary); margin: 16px 0 8px;">Variables & Data Types</h4>
+          <p>Variables store information. JavaScript supports strings, numbers, booleans, arrays, and objects.</p>
+          <div class="code-block">
+// Store information in variables<br/>
+let name = "Aayush";              // string<br/>
+let age = 22;                     // number<br/>
+let isStudent = true;             // boolean<br/>
+let skills = ["HTML", "CSS", "JavaScript"]; // array<br/>
+let profile = {                   // object
+  location: "Remote",
+  experience: 2
+};
+
+console.log(typeof name); // "string"
+          </div>
+          <p><strong>What this does:</strong> Declares variables of several data types and uses <code>typeof</code> to show the type of a value.</p>
+
+          <h4 style="color: var(--primary); margin: 16px 0 8px;">Functions</h4>
+          <p>Functions are reusable blocks of code. They can accept inputs (parameters) and return values.</p>
+          <div class="code-block">
+// Function declaration<br/>
+function greet(name) {<br/>
+  return `Hello, ${name}!`;<br/>
+}<br/>
+<br/>
+// Arrow function (shorter syntax)<br/>
+const add = (a, b) => a + b;<br/>
+<br/>
+let message = greet("Aayush");<br/>
+console.log(message); // "Hello, Aayush!"
+console.log(add(2, 3)); // 5
+          </div>          <p><strong>What this does:</strong> Defines reusable functions, calls them with arguments, and logs the results. The arrow function is a shorter way to write simple functions.</p>
+          <h4 style="color: var(--primary); margin: 16px 0 8px;">Event Listeners & DOM Interaction</h4>
+          <p>Event listeners run code when users interact with the page, and the DOM is how JavaScript reads/changes HTML.</p>
+          <div class="code-block">
+// Respond to a button click and update the page<br/>
+const button = document.querySelector("#myButton");<br/>
+const output = document.querySelector("#output");<br/>
+<br/>
+button.addEventListener("click", () => {<br/>
+  output.textContent = "Button clicked!"; // Update DOM content<br/>
+});
+          </div>
+          <p><strong>What this does:</strong> Selects elements from the page, listens for a click event, and changes the text on the page when the event happens.</p>
+
+          <p><strong>Tip:</strong> Use <code>console.log()</code> to debug values and check what your code is doing.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title">
+          <h2>Interactive JavaScript Demonstrations</h2>
+          <p>Click the buttons to see JavaScript in action - all examples work right on this page!</p>
+        </div>
+
+        <div class="card">
+          <h3>1. Event Handling - Counter Demo</h3>
+          <p>
+            This demonstrates event listeners responding to user clicks.
+            Each button triggers a JavaScript function that updates the counter.
+          </p>
+          <div class="demo">
+            <h4>Demo: Interactive Counter</h4>
+            <div class="demo-content">
+              <div class="counter-display" id="counterDisplay">0</div>
+              <div class="button-group">
+                <button onclick="increaseCounter()">Increase</button>
+                <button onclick="decreaseCounter()">Decrease</button>
+                <button onclick="resetCounter()">Reset</button>
+              </div>
+              <p style="color: var(--muted); font-size: 0.9rem; margin: 12px 0 0;">
+                <strong>How it works:</strong> The onclick attribute calls a JavaScript function that updates the counter value.
+              </p>
+              <div class="code-block">
+// Counter demo functions (defined at the bottom of the page)
+let counter = 0;
+
+function increaseCounter() {
+  counter++;
+  document.getElementById('counterDisplay').textContent = counter;
+}
+
+function decreaseCounter() {
+  counter--;
+  document.getElementById('counterDisplay').textContent = counter;
+}
+
+function resetCounter() {
+  counter = 0;
+  document.getElementById('counterDisplay').textContent = counter;
+}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>2. DOM Manipulation - Text Input</h3>
+          <p>
+            This demonstrates how JavaScript can update the page content based on user input.
+          </p>
+          <div class="demo">
+            <h4>Demo: Real-Time Text Update</h4>
+            <div class="demo-content">
+              <div class="input-demo">
+                <input type="text" id="nameInput" placeholder="Type your name here...">
+                <button onclick="updateGreeting()">Say Hello</button>
+              </div>
+              <div class="demo-output" id="greetingOutput">
+                Your greeting will appear here
+              </div>
+              <p style="color: var(--muted); font-size: 0.9rem; margin: 12px 0 0;">
+                <strong>What happens:</strong> JavaScript reads the input value and updates the page content instantly.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>3. Conditions & Logic - Color Changer</h3>
+          <p>
+            JavaScript can make decisions based on conditions.
+          </p>
+          <div class="demo">
+            <h4>Demo: Dynamic Color Generator</h4>
+            <div class="demo-content">
+              <button onclick="generateRandomColor()">Generate Random Color</button>
+              <div class="color-box" id="colorBox"></div>
+              <div class="demo-output" id="colorOutput">
+                Click the button to generate colors
+              </div>
+              <p style="color: var(--muted); font-size: 0.9rem; margin: 12px 0 0;">
+                <strong>Logic:</strong> JavaScript generates a random color and applies it to the box using DOM manipulation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>4. Arrays & Loops - To-Do List</h3>
+          <p>
+            This demonstrates storing data in arrays and iterating through them with JavaScript.
+          </p>
+          <div class="demo">
+            <h4>Demo: Simple To-Do List</h4>
+            <div class="demo-content">
+              <div class="input-demo">
+                <input type="text" id="todoInput" placeholder="Add a new task...">
+                <button onclick="addTodo()">Add Task</button>
+              </div>
+              <ul class="todo-list" id="todoList">
+                <li>Example task <button class="remove-btn" onclick="removeTodo(this)">Remove</button></li>
+              </ul>
+              <p style="color: var(--muted); font-size: 0.9rem; margin: 12px 0 0;">
+                <strong>Features:</strong> Add items to the array, loop through to display them, and remove items.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>5. Form Validation</h3>
+          <p>
+            JavaScript validates user input before submission to ensure data quality.
+          </p>
+          <div class="demo">
+            <h4>Demo: Form Validation</h4>
+            <div class="demo-content">
+              <form onsubmit="return validateForm(event)">
+                <div style="margin-bottom: 12px;">
+                  <label style="display: block; margin-bottom: 4px; color: var(--primary); font-weight: bold;">
+                    Email:
+                  </label>
+                  <input type="email" id="emailInput" placeholder="your@email.com" style="width: 100%; padding: 8px; border: 1px solid var(--border); border-radius: 4px;">
+                </div>
+
+                <div style="margin-bottom: 12px;">
+                  <label style="display: block; margin-bottom: 4px; color: var(--primary); font-weight: bold;">
+                    Password (min 6 characters):
+                  </label>
+                  <input type="password" id="passwordInput" placeholder="••••••" style="width: 100%; padding: 8px; border: 1px solid var(--border); border-radius: 4px;">
+                </div>
+
+                <button type="submit">Validate & Submit</button>
+              </form>
+              <p style="color: var(--muted); font-size: 0.9rem; margin: 12px 0 0;">
+                <strong>Validation:</strong> JavaScript checks if email is valid and password is strong before allowing submission.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Aayush Niure | Junior Full Stack Developer Portfolio</p>
+  </footer>
+
+  <script>
+    // ===== COUNTER DEMO =====
+    let counter = 0;
+
+    function increaseCounter() {
+      counter++;
+      document.getElementById('counterDisplay').textContent = counter;
+    }
+
+    function decreaseCounter() {
+      counter--;
+      document.getElementById('counterDisplay').textContent = counter;
+    }
+
+    function resetCounter() {
+      counter = 0;
+      document.getElementById('counterDisplay').textContent = counter;
+    }
+
+    // ===== TEXT UPDATE DEMO =====
+    function updateGreeting() {
+      const name = document.getElementById('nameInput').value;
+      if (name.trim() === '') {
+        document.getElementById('greetingOutput').textContent = 'Please enter a name first!';
+        return;
+      }
+      document.getElementById('greetingOutput').textContent = 'Hello, ' + name + '! Welcome to my portfolio!';
+    }
+
+    // Allow Enter key to submit
+    document.getElementById('nameInput').addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') {
+        updateGreeting();
+      }
+    });
+
+    // ===== COLOR GENERATOR DEMO =====
+    function generateRandomColor() {
+      const colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#FFA07A', '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E2'];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.getElementById('colorBox').style.backgroundColor = randomColor;
+      document.getElementById('colorOutput').textContent = 'Color: ' + randomColor;
+    }
+
+    // ===== TODO LIST DEMO =====
+    function addTodo() {
+      const input = document.getElementById('todoInput');
+      const taskText = input.value.trim();
+
+      if (taskText === '') {
+        alert('Please enter a task!');
+        return;
+      }
+
+      const todoList = document.getElementById('todoList');
+      const li = document.createElement('li');
+      li.innerHTML = taskText + ' <button class="remove-btn" onclick="removeTodo(this)">Remove</button>';
+      todoList.appendChild(li);
+      input.value = '';
+      input.focus();
+    }
+
+    function removeTodo(button) {
+      button.parentElement.remove();
+    }
+
+    document.getElementById('todoInput').addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') {
+        addTodo();
+      }
+    });
+
+    // ===== FORM VALIDATION DEMO =====
+    function validateForm(event) {
+      event.preventDefault();
+      const email = document.getElementById('emailInput').value;
+      const password = document.getElementById('passwordInput').value;
+
+      if (email === '' || password === '') {
+        alert('Please fill in all fields!');
+        return false;
+      }
+
+      if (!email.includes('@')) {
+        alert('Please enter a valid email address!');
+        return false;
+      }
+
+      if (password.length < 6) {
+        alert('Password must be at least 6 characters long!');
+        return false;
+      }
+
+      alert('Form validated successfully! ✓\n\nEmail: ' + email + '\nPassword: ' + '•'.repeat(password.length));
+      return false;
+    }
+
+    // ===== API SIMULATION DEMO =====
+    function simulateAPICall() {
+      const output = document.getElementById('apiOutput');
+      output.style.display = 'block';
+      output.textContent = 'Loading data...';
+
+      // Simulate a network delay
+      setTimeout(() => {
+        const randomIds = [101, 102, 103, 104, 105];
+        const randomUser = randomIds[Math.floor(Math.random() * randomIds.length)];
+        output.textContent = 'User ID: ' + randomUser + ' | Name: Developer ' + randomUser + ' | Status: Active ✓';
+      }, 1500);
+    }
+  </script>
+</body>
+</html>

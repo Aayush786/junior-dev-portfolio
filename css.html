@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS - Portfolio</title>
+  <link rel="stylesheet" href="css/shared-styles.css">
+  <link rel="stylesheet" href="css/css.css">
+  <style></style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>CSS - Styling & Layout</h1>
+      <p>Creating beautiful, responsive designs that work across all devices</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html">Home</a>
+      <a href="fullstack-development.html">Full Stack Development</a>
+      <a href="html.html">HTML</a>
+      <a href="css.html">CSS</a>
+      <a href="bootstrap.html">Bootstrap</a>
+      <a href="javascript.html">JavaScript</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <section>
+        <div class="section-title">
+          <h2>Understanding CSS</h2>
+          <p>Cascading Style Sheets - transforming plain HTML into beautiful designs</p>
+        </div>
+
+        <div class="card">
+          <h3>What is CSS?</h3>
+          <p>
+            CSS (Cascading Style Sheets) is used to style and layout web pages — for example, 
+            to alter the font, color, size, and spacing of your content, split it into multiple columns, 
+            or add animations and other decorative features.
+          </p>
+          <p>
+            While HTML provides the structure and content, CSS brings it to life with colors, layouts, 
+            and visual interactions.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Core CSS Concepts</h3>
+          <p>
+            CSS is based on selecting elements and applying properties. The cascade and specificity determine which rules apply when multiple styles target the same element.
+          </p>
+          <ul class="feature-list">
+            <li><strong>Selectors:</strong> Target HTML elements (element, class, ID, attribute selectors). Use specific selectors to apply styles where needed.</li>
+            <li><strong>Properties:</strong> Define what to style (color, size, position, etc.) and can be mixed into themes.</li>
+            <li><strong>Values:</strong> Specify how to style (px, em, %, colors, etc.), including relative units for responsiveness.</li>
+            <li><strong>Box Model:</strong> Understanding margin, padding, border, and content - the foundation of layout and spacing.</li>
+            <li><strong>Flexbox & Grid:</strong> Modern layout techniques for responsive design and consistent spacing.</li>
+            <li><strong>Responsive Design:</strong> Making layouts adapt to different screen sizes using media queries and relative units.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>CSS Syntax & Selectors</h3>
+
+          <h4 style="color: var(--primary); margin: 16px 0 8px;">Basic CSS Structure</h4>
+          <div class="code-block">
+selector {<br/>
+&nbsp;&nbsp;property: value;<br/>
+&nbsp;&nbsp;property: value;<br/>
+}
+          </div>
+
+          <h4 style="color: var(--primary); margin: 16px 0 8px;">Example: Styling Different Elements</h4>
+          <div class="code-block">
+/* Element selector */<br/>
+p { color: blue; }<br/>
+<br/>
+/* Class selector */<br/>
+.highlight { background: yellow; }<br/>
+<br/>
+/* ID selector */<br/>
+#header { font-size: 2rem; }<br/>
+<br/>
+/* Combining selectors */<br/>
+nav a:hover { color: orange; }
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title">
+          <h2>CSS Demonstrations</h2>
+          <p>Interactive examples showing CSS in action</p>
+        </div>
+
+        <div class="card">
+          <h3>1. Box Model Demo</h3>
+          <p>
+            Every element in CSS has a box model: content → padding → border → margin. 
+            These properties control spacing and layout.
+          </p>
+          <div class="demo">
+            <h4>Demo: Understanding Box Model</h4>
+            <div class="demo-content">
+              <div class="box-model-demo">
+                <div>
+                  <div class="box-element">Margin (outer space)</div>
+                  <small style="display: block; color: var(--muted); margin-top: 8px;">Outer spacing</small>
+                </div>
+                <div>
+                  <div class="box-element">Padding (inner space)</div>
+                  <small style="display: block; color: var(--muted); margin-top: 8px;">Inner spacing</small>
+                </div>
+                <div>
+                  <div class="box-element">Border & Content</div>
+                  <small style="display: block; color: var(--muted); margin-top: 8px;">Core element</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p><strong>How it works:</strong> The content box holds text or images, padding adds space inside the border, the border wraps around, and margin is the transparent space outside. Use browser devtools (element inspector) to see each box layer.</p>
+          <div class="code-block">
+.box {
+  margin: 16px;
+  padding: 12px;
+  border: 2px solid #ccc;
+}
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>2. Flexbox Layout Demo</h3>
+          <p>
+            Flexbox is a powerful layout tool that makes it easy to design flexible, responsive row-and-column layouts.
+          </p>
+          <div class="demo">
+            <h4>Demo: Flexbox in Action</h4>
+            <div class="demo-content">
+              <p style="color: var(--muted); margin-top: 0;">Flexible items that wrap on smaller screens:</p>
+              <div class="flexbox-demo">
+                <div class="flex-item">Item 1</div>
+                <div class="flex-item">Item 2</div>
+                <div class="flex-item">Item 3</div>
+                <div class="flex-item">Item 4</div>
+              </div>
+            </div>
+          </div>
+          <p><strong>How it works:</strong> Flexbox lays items along a main axis (row or column). Items can grow/shrink with <code>flex: 1</code> and can wrap to the next line with <code>flex-wrap</code>. It’s great for toolbars, card rows, and responsive nav menus.</p>
+          <div class="code-block">
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.flex-item {
+  flex: 1 1 150px;
+  min-width: 150px;
+}
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>3. CSS Grid Demo</h3>
+          <p>
+            CSS Grid is perfect for creating two-dimensional layouts with rows and columns.
+          </p>
+          <div class="demo">
+            <h4>Demo: Grid Layout</h4>
+            <div class="demo-content">
+              <p style="color: var(--muted); margin-top: 0;">Organized grid of items:</p>
+              <div class="grid-demo">
+                <div class="grid-item">Grid 1</div>
+                <div class="grid-item">Grid 2</div>
+                <div class="grid-item">Grid 3</div>
+                <div class="grid-item">Grid 4</div>
+                <div class="grid-item">Grid 5</div>
+                <div class="grid-item">Grid 6</div>
+              </div>
+            </div>
+          </div>
+          <p><strong>How it works:</strong> Grid uses <code>grid-template-columns</code> to define columns and uses grid items to automatically place content. The demo uses <code>auto-fit</code> and <code>minmax()</code> to make the grid respond to different screen sizes (items wrap when space is limited).</p>
+          <div class="code-block">
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>4. Shadows & Depth Demo</h3>
+          <p>
+            Box shadows create depth and visual hierarchy on your page.
+          </p>
+          <div class="demo">
+            <h4>Demo: Different Shadow Levels</h4>
+            <div class="demo-content">
+              <div class="shadow-demo">
+                <div class="shadow-box sm">Small Shadow</div>
+                <div class="shadow-box md">Medium Shadow</div>
+                <div class="shadow-box lg">Large Shadow</div>
+              </div>
+            </div>
+          </div>
+          <p><strong>How it works:</strong> Box shadows use <code>box-shadow: offset-x offset-y blur spread color</code>. Larger blur/spread values create deeper shadows; subtle shadows help separate elements while keeping the design clean.</p>
+          <div class="code-block">
+.shadow {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>5. Animations Demo</h3>
+          <p>
+            CSS animations bring static elements to life with smooth, performance-optimized motion.
+          </p>
+          <div class="demo">
+            <h4>Demo: CSS Animation</h4>
+            <div class="demo-content">
+              <p style="color: var(--muted); text-align: center; margin-top: 0;">Watch the bouncing circle:</p>
+              <div class="animation-demo"></div>
+            </div>
+          </div>
+          <p><strong>How it works:</strong> Define keyframes with <code>@keyframes</code> and apply them using <code>animation</code>. In this demo, the circle moves up and down between two states, and the browser handles the smooth interpolation.</p>
+          <div class="code-block">
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+.circle {
+  animation: bounce 2s infinite;
+}
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>6. Hover Effects & Transitions</h3>
+          <p>
+            Interactive elements respond to user actions with smooth transitions.
+          </p>
+          <div class="demo">
+            <h4>Demo: Hover Effects (Try clicking the buttons)</h4>
+            <div class="demo-content" style="text-align: center; padding: 20px;">
+              <button class="hover-button">Hover Me</button>
+              <button class="hover-button">Click Me Too</button>
+              <button class="hover-button">Try This</button>
+            </div>
+          </div>
+          <p><strong>How it works:</strong> The <code>transition</code> property defines which CSS properties animate and how long it takes. When the button state changes (like :hover), the browser interpolates the values over time for a smooth effect.</p>
+          <div class="code-block">
+.button {
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.button:hover {
+  transform: translateY(-2px);
+}
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>7. Responsive Design Demo</h3>
+          <p>
+            CSS media queries make layouts adapt to different screen sizes.
+          </p>
+          <div class="demo">
+            <h4>Demo: Responsive Container</h4>
+            <div class="demo-content">
+              <div class="responsive-demo">
+                Resize your browser to see responsive behavior
+              </div>
+              <p style="color: var(--muted); font-size: 0.9rem; margin: 12px 0 0;">
+                This page uses different styles based on screen width using @media queries.
+              </p>
+            </div>
+          </div>
+          <p><strong>How it works:</strong> Media queries let you apply CSS only when the viewport matches conditions (like min-width). This enables mobile-first design: start with small-screen styles, then add enhancements for larger screens.</p>
+          <div class="code-block">
+@media (min-width: 768px) {
+  .responsive-demo {
+    height: 140px;
+  }
+}
+          </div>
+        </div>
+
+
+        <div class="card">
+          <h3>CSS Variables (Custom Properties)</h3>
+          <p>
+            CSS Variables allow you to store reusable values and change them dynamically:
+          </p>
+          <div class="code-block">
+:root {<br/>
+&nbsp;&nbsp;--primary-color: #163a76;<br/>
+&nbsp;&nbsp;--spacing-unit: 8px;<br/>
+&nbsp;&nbsp;--transition-speed: 0.3s;<br/>
+}<br/>
+<br/>
+.button {<br/>
+&nbsp;&nbsp;background: var(--primary-color);<br/>
+&nbsp;&nbsp;padding: calc(var(--spacing-unit) * 2);<br/>
+&nbsp;&nbsp;transition: background var(--transition-speed) ease;<br/>
+}
+          </div>
+          <p><strong>How it works:</strong> Custom properties are defined with <code>--name</code> and accessed using <code>var(--name)</code>. You can override them in specific sections (like a dark mode theme) and provide fallbacks: <code>var(--color, black)</code>.</p>
+          <div class="code-block">
+.dark-mode {
+  --primary-color: #0b1d3a;
+  --surface: #112;
+}
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Media Queries for Responsive Design</h3>
+          <p>
+            Media queries allow different styles for different screen sizes:
+          </p>
+          <div class="code-block">
+/* Mobile first - base styles for small screens */<br/>
+.container { width: 100%; }<br/>
+<br/>
+/* Tablet and up */<br/>
+@media (min-width: 768px) {<br/>
+&nbsp;&nbsp;.container { width: 90%; }<br/>
+&nbsp;&nbsp;.grid { grid-template-columns: 1fr 1fr; }<br/>
+}<br/>
+<br/>
+/* Desktop and up */<br/>
+@media (min-width: 1024px) {<br/>
+&nbsp;&nbsp;.container { width: 1120px; }<br/>
+&nbsp;&nbsp;.grid { grid-template-columns: 1fr 1fr 1fr; }<br/>
+}
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Advanced CSS Selectors</h3>
+          <p>
+            CSS offers powerful selectors for precise targeting:
+          </p>
+          <div class="code-block">
+/* Pseudo-classes */<br/>
+a:hover { color: blue; }      /* On hover */<br/>
+input:focus { outline: blue; } /* When focused */<br/>
+li:first-child { margin: 0; }  /* First element */<br/>
+li:last-child { border: none; } /* Last element */<br/>
+<br/>
+/* Pseudo-elements */<br/>
+p::first-line { font-weight: bold; }   /* First line of paragraph */<br/>
+input::placeholder { color: gray; }     /* Placeholder text */<br/>
+li::before { content: "→"; }           /* Add content before element */<br/>
+<br/>
+/* Attribute selectors */<br/>
+input[type="email"] { border: 2px solid blue; }<br/>
+a[href^="https"] { color: green; } /* Links starting with https */
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>CSS Performance Best Practices</h3>
+          <ul class="feature-list">
+            <li><strong>Specificity:</strong> Use low specificity selectors for easier overrides</li>
+            <li><strong>Avoid inline styles:</strong> Keep CSS separate from HTML for maintainability</li>
+            <li><strong>Organize with comments:</strong> Group related styles, use meaningful names</li>
+            <li><strong>Minimize repaints:</strong> Use transform and opacity for animations (GPU-accelerated)</li>
+            <li><strong>Use shorthand:</strong> margin: 10px 20px instead of multiple rules</li>
+            <li><strong>Mobile-first:</strong> Start with mobile, enhance for larger screens</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Aayush Niure | Junior Full Stack Developer Portfolio</p>
+  </footer>
+</body>
+</html>

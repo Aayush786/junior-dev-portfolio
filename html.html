@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML - Portfolio</title>
+  <link rel="stylesheet" href="css/shared-styles.css">
+  <link rel="stylesheet" href="css/html.css">
+  <style></style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>HTML - Structure & Semantics</h1>
+      <p>Building well-structured, semantic content that forms the foundation of web development</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html">Home</a>
+      <a href="fullstack-development.html">Full Stack Development</a>
+      <a href="html.html">HTML</a>
+      <a href="css.html">CSS</a>
+      <a href="bootstrap.html">Bootstrap</a>
+      <a href="javascript.html">JavaScript</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <section>
+        <div class="section-title">
+          <h2>Understanding HTML</h2>
+          <p>HyperText Markup Language - the building block of all web pages</p>
+        </div>
+
+        <div class="card">
+          <h3>What is HTML?</h3>
+          <p>
+            HTML (HyperText Markup Language) is the standard markup language used to create web pages. 
+            It provides the structure and content for websites by using a system of tags and elements that 
+            tell browsers how to display information.
+          </p>
+          <p>
+            Think of HTML as the skeleton of a webpage - it defines the basic structure, but CSS adds the styling 
+            and JavaScript adds the interactivity.
+          </p>
+          <p>
+            When a browser loads a page, it parses the HTML into a Document Object Model (DOM) tree. 
+            JavaScript can then read and modify that DOM, which is how dynamic web apps are built.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Key HTML Concepts</h3>
+          <p>
+            Understanding the building blocks of HTML helps you write clear, maintainable code.
+            Semantic tags give meaning to content, which improves accessibility and makes your pages easier to maintain.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <strong>Tags and Elements:</strong> HTML uses paired tags like &lt;tag&gt; and &lt;/tag&gt;.
+              <div class="small">Tags are the markup symbols (like &lt;p&gt; for paragraph), and elements are the complete structure including opening tag, content, and closing tag. For example, &lt;p&gt;Hello World&lt;/p&gt; is a complete paragraph element.</div>
+            </li>
+            <li>
+              <strong>Semantic HTML:</strong> Using meaningful tags like &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;footer&gt; to describe the role of content.
+              <div class="small">Instead of generic &lt;div&gt; tags everywhere, semantic elements tell browsers and screen readers what each section does - &lt;header&gt; for site branding, &lt;nav&gt; for menus, &lt;main&gt; for primary content, &lt;article&gt; for independent content like blog posts.</div>
+            </li>
+            <li>
+              <strong>Attributes:</strong> Adding properties to tags, like href in &lt;a href="url"&gt;, or alt in &lt;img&gt;.
+              <div class="small">Attributes provide extra information about elements. Common ones include id (unique identifier), class (styling group), src (resource location), alt (image description for accessibility), and data-* (custom data storage).</div>
+            </li>
+            <li>
+              <strong>Forms:</strong> Creating interactive input elements for user data collection and submission.
+              <div class="small">Forms use elements like &lt;input&gt;, &lt;textarea&gt;, &lt;select&gt;, and &lt;button&gt; to gather user input. They submit data to servers via GET or POST methods, enabling user interactions like logins, searches, and data entry.</div>
+            </li>
+            <li>
+              <strong>Accessibility:</strong> Ensuring content is available to all users, including those with disabilities.
+              <div class="small">This means adding alt text to images, using proper heading hierarchy (h1-h6), ensuring keyboard navigation works, providing sufficient color contrast, and using ARIA attributes when needed for complex interactions.</div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Common HTML Elements</h3>
+          <p>
+            HTML elements form the content of your page. Using the right element for the right purpose ensures better readability,
+            accessibility, and maintainability.
+          </p>
+
+          <h4 style="color: var(--primary); margin-top: 0;">Structural Elements</h4>
+          <div class="code-block">
+&lt;!DOCTYPE html&gt; &lt;!-- Document type declaration --&gt;<br/>
+&lt;html&gt;<br/>
+&nbsp;&nbsp;&lt;head&gt;...&lt;/head&gt; &lt;!-- Meta information --&gt;<br/>
+&nbsp;&nbsp;&lt;body&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;header&gt;&lt;/header&gt; &lt;!-- Site header --&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;nav&gt;&lt;/nav&gt; &lt;!-- Navigation menu --&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;main&gt;&lt;/main&gt; &lt;!-- Main content --&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;footer&gt;&lt;/footer&gt; &lt;!-- Site footer --&gt;<br/>
+&nbsp;&nbsp;&lt;/body&gt;<br/>
+&lt;/html&gt;
+          </div>
+
+          <h4 style="color: var(--primary);">Content Elements</h4>
+          <p>
+            These elements are used to build the actual content on the page. Proper use makes the page easier for users and search engines to understand.
+          </p>
+          <ul class="feature-list">
+            <li><strong>&lt;h1&gt; to &lt;h6&gt;</strong> - Headings (h1 most important, h6 least)</li>
+            <li><strong>&lt;p&gt;</strong> - Paragraphs of text</li>
+            <li><strong>&lt;ul&gt; / &lt;ol&gt;</strong> - Unordered (bullets) and ordered (numbered) lists</li>
+            <li><strong>&lt;a href=""&gt;</strong> - Links to other pages or resources</li>
+            <li><strong>&lt;img src="" alt=""&gt;</strong> - Images with alternative text for accessibility</li>
+            <li><strong>&lt;strong&gt; / &lt;em&gt;</strong> - Bold and italic emphasis (semantically meaningful)</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title">
+          <h2>HTML Demonstrations</h2>
+          <p>Practical examples showing HTML concepts in action</p>
+        </div>
+
+        <div class="card">
+          <h3>1. Semantic Structure Demo</h3>
+          <p>This section demonstrates proper semantic HTML structure:</p>
+          <div class="demo">
+            <h4>Demo: Well-Structured Document</h4>
+            <div class="demo-content">
+              <header style="background: #e3f2fd; padding: 16px; border-radius: 6px; margin-bottom: 12px; position: relative;">
+                <h5 style="margin: 0; color: var(--primary);">Header - Site Title and Navigation</h5>
+                <small style="display: block; color: var(--muted); margin-top: 4px;">&lt;header&gt; - Contains branding and top-level info</small>
+              </header>
+              <nav style="background: #f3e5f5; padding: 12px; border-radius: 6px; margin-bottom: 12px; display: flex; gap: 10px; position: relative;">
+                <a href="#" style="color: var(--primary); text-decoration: none;">Home</a>
+                <a href="#" style="color: var(--primary); text-decoration: none;">About</a>
+                <a href="#" style="color: var(--primary); text-decoration: none;">Contact</a>
+                <small style="position: absolute; bottom: 4px; right: 8px; color: var(--muted); font-size: 0.8em;">&lt;nav&gt; - Site navigation menu</small>
+              </nav>
+              <main style="background: #fce4ec; padding: 16px; border-radius: 6px; margin-bottom: 12px; position: relative;">
+                <h5 style="margin-top: 0; color: var(--primary);">Main Content Area</h5>
+                <p>This is where the main page content goes.</p>
+                <small style="display: block; color: var(--muted); margin-top: 8px;">&lt;main&gt; - Primary content of the page</small>
+              </main>
+              <footer style="background: #f1f8e9; padding: 12px; border-radius: 6px; text-align: center; color: var(--muted); position: relative;">
+                <p style="margin: 0;">© 2026 | Footer Information</p>
+                <small style="display: block; margin-top: 4px; color: var(--muted);">&lt;footer&gt; - Copyright and site info</small>
+              </footer>
+            </div>
+          </div>
+          <p><strong>Why this matters:</strong> Semantic HTML improves accessibility, SEO, and code readability. Screen readers understand the page structure better.</p>
+          <p>
+            Using <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> helps browsers and search engines identify key parts of your page, and helps other developers quickly understand your layout.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>2. Form Elements Demo</h3>
+          <p>This example shows different HTML form elements and how they collect user input.</p>
+          <div class="demo">
+            <h4>Demo: HTML Form</h4>
+            <div class="demo-grid">
+              <div class="demo-code">
+<pre style="margin: 0;">
+&lt;form&gt;
+  &lt;label for="name"&gt;Full Name&lt;/label&gt;
+  &lt;input type="text" id="name" name="name" placeholder="Enter your full name" required&gt;
+
+  &lt;label for="email"&gt;Email Address&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" placeholder="your@email.com" required&gt;
+
+  &lt;label for="experience"&gt;Years of Experience&lt;/label&gt;
+  &lt;select id="experience" name="experience"&gt;
+    &lt;option value=""&gt;Select an option&lt;/option&gt;
+    &lt;option value="0-1"&gt;0-1 years&lt;/option&gt;
+    &lt;option value="1-3"&gt;1-3 years&lt;/option&gt;
+    &lt;option value="3-5"&gt;3-5 years&lt;/option&gt;
+    &lt;option value="5+"&gt;5+ years&lt;/option&gt;
+  &lt;/select&gt;
+
+  &lt;label for="message"&gt;Message&lt;/label&gt;
+  &lt;textarea id="message" name="message" placeholder="Tell us about yourself..."&gt;&lt;/textarea&gt;
+
+  &lt;button type="submit"&gt;Submit Form&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+              </div>
+              <div class="demo-live">
+                <form onsubmit="event.preventDefault(); alert('Form submitted! (This is a demo)');">
+                  <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="experience">Years of Experience</label>
+                    <select id="experience" name="experience">
+                      <option value="">Select an option</option>
+                      <option value="0-1">0-1 years</option>
+                      <option value="1-3">1-3 years</option>
+                      <option value="3-5">3-5 years</option>
+                      <option value="5+">5+ years</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell us about yourself..."></textarea>
+                  </div>
+
+                  <button type="submit">Submit Form</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <p><strong>Elements shown:</strong> text input, email input, select dropdown, textarea, and submit button.</p>
+          <p><strong>How it works:</strong> The <code>&lt;form&gt;</code> element wraps inputs; <code>&lt;label&gt;</code> associates with inputs via <code>for</code> attribute; <code>name</code> attributes send data to server; <code>required</code> prevents submission without input; <code>type="email"</code> validates email format.</p>
+        </div>
+
+        <div class="card">
+          <h3>3. Links and Images Demo</h3>
+          <p>Examples of links, lists, and images — core HTML elements for navigation and content.</p>
+          <div class="demo">
+            <h4>Demo: Lists, Links, and Images</h4>
+            <div class="demo-grid">
+              <div class="demo-code">
+<pre style="margin: 0;">
+&lt;!-- Unordered list with links --&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://w3schools.com"&gt;Learn HTML&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="mailto:contact@example.com"&gt;Email Us&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Image with alt text --&gt;
+&lt;img src="https://via.placeholder.com/120" alt="Sample placeholder image"&gt;
+
+&lt;!-- Image with width and height --&gt;
+&lt;img src="https://via.placeholder.com/80x60" alt="Small image" width="80" height="60"&gt;
+</pre>
+              </div>
+              <div class="demo-live">
+                <h5 style="color: var(--primary); margin-top: 0;">Common Web Technologies:</h5>
+                <ul style="color: var(--muted);">
+                  <li><strong>HTML</strong> - Structure (the content)</li>
+                  <li><strong>CSS</strong> - Styling (how it looks)</li>
+                  <li><strong>JavaScript</strong> - Interactivity (how it works)</li>
+                </ul>
+                <p style="color: var(--muted); margin-bottom: 12px;">
+                  <strong>Link Examples:</strong><br>
+                  <a href="https://www.w3schools.com/html/" style="color: var(--accent); text-decoration: none; font-weight: bold;">Learn HTML at W3Schools →</a><br>
+                  <a href="mailto:theaayushniure@gmail.com" style="color: var(--accent); text-decoration: none;">Send Email</a>
+                </p>
+                <p style="color: var(--muted); margin: 0; font-size: 0.9rem;">
+                  <strong>Image Examples:</strong><br>
+                  <img src="https://via.placeholder.com/120" alt="Placeholder example image" style="display: block; margin: 8px 0;" />
+                  <img src="https://via.placeholder.com/80x60" alt="Small image example" width="80" height="60" style="display: block; margin: 8px 0;" />
+                </p>
+              </div>
+            </div>
+          </div>
+          <p><strong>How it works:</strong> <code>&lt;a href=""&gt;</code> creates links (use <code>https://</code> for web, <code>mailto:</code> for email); <code>&lt;img src="" alt=""&gt;</code> displays images (alt for accessibility); <code>&lt;ul&gt;&lt;li&gt;</code> makes bullet lists; width/height attributes prevent layout shifts.</p>
+        </div>
+
+
+        <div class="card">
+          <h3>HTML5 Modern Features</h3>
+          <p>HTML5 introduced many new elements and attributes that improve semantics and functionality:</p>
+          <p>
+            These additions make it easier to build rich, accessible pages without relying on extra libraries or complicated workarounds. 
+            They help browsers and search engines better understand your content.
+          </p>
+          <ul class="feature-list">
+            <li><strong>&lt;article&gt;, &lt;section&gt;, &lt;nav&gt;:</strong> Semantic elements that replace generic divs</li>
+            <li><strong>&lt;figure&gt; & &lt;figcaption&gt;:</strong> Meaningful image grouping with captions</li>
+            <li><strong>&lt;video&gt; & &lt;audio&gt;:</strong> Native media support without plugins</li>
+            <li><strong>data-* attributes:</strong> Store custom data on elements</li>
+            <li><strong>Input types:</strong> email, date, number, range, color with built-in validation</li>
+            <li><strong>required, pattern, placeholder:</strong> Attributes that improve UX and validation</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>HTML Document Structure Best Practices</h3>
+          <p>
+            A well-structured HTML document ensures your page is accessible, searchable, and easy to maintain. 
+            The head section contains metadata that improves performance and search engine visibility.
+          </p>
+          <div class="code-block">
+&lt;!DOCTYPE html&gt;<br/>
+&lt;html lang="en"&gt;<br/>
+&lt;head&gt;<br/>
+&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br/>
+&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br/>
+&nbsp;&nbsp;&lt;meta name="description" content="Page description for SEO"&gt;<br/>
+&nbsp;&nbsp;&lt;title&gt;Descriptive Page Title&lt;/title&gt;<br/>
+&lt;/head&gt;<br/>
+&lt;body&gt;<br/>
+&nbsp;&nbsp;&lt;header&gt;&lt;/header&gt;  &lt;!-- Site header/navigation --&gt;<br/>
+&nbsp;&nbsp;&lt;main&gt;              &lt;!-- Main content --&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;article&gt;&lt;/article&gt;<br/>
+&nbsp;&nbsp;&lt;/main&gt;<br/>
+&nbsp;&nbsp;&lt;footer&gt;&lt;/footer&gt;  &lt;!-- Site footer --&gt;<br/>
+&lt;/body&gt;<br/>
+&lt;/html&gt;
+          </div>
+          <p><strong>Why this matters:</strong> Semantic HTML improves SEO, accessibility, and maintainability. Setting the correct language, viewport, and meta description helps search engines and assistive technology interpret your site correctly.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Aayush Niure | Junior Full Stack Developer Portfolio</p>
+  </footer>
+</body>
+</html>

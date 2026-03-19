@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Stack Development - Portfolio</title>
+  <link rel="stylesheet" href="css/shared-styles.css">
+  <link rel="stylesheet" href="css/fullstack-development.css">
+  <style></style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Full Stack Development</h1>
+      <p>Understanding how frontend and backend technologies work together to create complete web applications</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html">Home</a>
+      <a href="fullstack-development.html">Full Stack Development</a>
+      <a href="html.html">HTML</a>
+      <a href="css.html">CSS</a>
+      <a href="bootstrap.html">Bootstrap</a>
+      <a href="javascript.html">JavaScript</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <section>
+        <div class="section-title">
+          <h2>What is Full Stack Development?</h2>
+        </div>
+
+        <div class="card">
+          <h3>Definition</h3>
+          <p>
+            Full stack development refers to the practice of building complete web applications from start to finish. 
+            A full stack developer works on both the frontend (what users see) and the backend (server-side logic and databases),
+            creating a seamless experience across the entire application stack.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>The Three Layers of Full Stack Development</h3>
+
+          <div class="two-column">
+            <div>
+              <h4 style="color: var(--primary); margin-top: 0;">Frontend Layer</h4>
+              <p>The user-facing part of the application built with:</p>
+              <ul class="feature-list">
+                <li>HTML for structure</li>
+                <li>CSS for styling and layout</li>
+                <li>JavaScript for interactivity</li>
+                <li>Responsive design for multiple devices</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 style="color: var(--primary); margin-top: 0;">Backend Layer</h4>
+              <p>Server-side logic and processing with:</p>
+              <ul class="feature-list">
+                <li>Server-side languages (Node.js, Python, PHP)</li>
+                <li>API endpoints for frontend communication</li>
+                <li>Business logic and data processing</li>
+                <li>Authentication and security</li>
+              </ul>
+            </div>
+          </div>
+
+          <h4 style="color: var(--primary); margin-top: 20px; margin-bottom: 10px;">Database Layer</h4>
+          <p>Data storage and retrieval using:</p>
+          <ul class="feature-list">
+            <li>Relational databases (SQL, PostgreSQL)</li>
+            <li>NoSQL databases (MongoDB, Firebase)</li>
+            <li>Data modeling and schema design</li>
+            <li>Query optimization for performance</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>How the Layers Work Together</h3>
+          <div class="highlight-box">
+            <strong>Example Flow:</strong> A user fills out a form on the frontend (HTML/CSS/JavaScript) 
+            → form data is sent to the backend server → server processes the data and stores it in a database 
+            → backend returns a response → JavaScript updates the page without reloading.
+          </div>
+          <p>
+            This interconnected approach allows developers to create dynamic, data-driven applications that respond 
+            to user input and provide personalized experiences.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Typical Full Stack Project Structure</h3>
+          <div class="highlight-box">
+            <code style="color: var(--primary); font-weight: bold;">
+              my-app/<br/>
+              ├── frontend/          (HTML, CSS, JavaScript)<br/>
+              ├── backend/           (Server-side code)<br/>
+              ├── database/          (Schema and migrations)<br/>
+              ├── public/            (Images, assets)<br/>
+              └── config/            (Environment settings)
+            </code>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>The Journey as a Junior Developer</h3>
+          <p>
+            As a junior full stack developer, you're building a foundation across all layers. You may not be an expert 
+            in everything, but understanding how HTML, CSS, JavaScript, and backend concepts work together is essential.
+          </p>
+          <p>
+            The following sections demonstrate my understanding of the frontend technologies (HTML, CSS, Bootstrap, and JavaScript) 
+            which are crucial components of the full stack development journey. These skills form the foundation for building 
+            effective user interfaces that communicate with backend systems.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Real-World Full Stack Architecture Example</h3>
+          <div class="highlight-box">
+            <strong>Example: User Registration Process</strong><br><br>
+            1. <strong>Frontend (User Interaction):</strong> User fills registration form (HTML), styled beautifully (CSS), 
+            validates before submission (JavaScript), responsive on mobile (Bootstrap)<br><br>
+            2. <strong>Communication:</strong> JavaScript sends form data to backend API via AJAX/Fetch<br><br>
+            3. <strong>Backend (Server Processing):</strong> Node.js/Python receives request, validates data, hashes password, creates user record<br><br>
+            4. <strong>Database (Data Persistence):</strong> New user stored in MongoDB/PostgreSQL with timestamp<br><br>
+            5. <strong>Response Flow:</strong> Backend sends confirmation, frontend JavaScript displays success message, 
+            user redirected to login page
+          </div>
+          <p>
+            This entire cycle demonstrates why full stack developers are valuable - they understand and can build every component 
+            that makes modern web applications functional.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Common Full Stack Development Challenges</h3>
+          <ul class="feature-list">
+            <li>
+              <strong>Data Consistency:</strong> Ensuring frontend and backend agree on data format and validation rules.
+              <div class="small">Example: If your API expects a date as <code>YYYY-MM-DD</code> but the UI sends <code>MM/DD/YYYY</code>, the request will fail.</div>
+            </li>
+            <li>
+              <strong>Performance:</strong> Optimizing both client-side (CSS, JavaScript) and server-side (database queries).
+              <div class="small">Example: Lazy-loading images reduces initial page load; on the server, adding an index can turn a slow query into a fast one.</div>
+            </li>
+            <li>
+              <strong>Security:</strong> Protecting user data across all layers - frontend validation, backend authentication, database encryption.
+              <div class="small">Example: Even if the UI checks email format, the backend must re-validate and sanitize to prevent injection attacks.</div>
+            </li>
+            <li>
+              <strong>Debugging:</strong> Problems can occur in browser, network request, server code, or database - must check all layers.
+              <div class="small">Example: A 500 error might be caused by a server exception, but the browser console and network tab show the failing request.</div>
+            </li>
+            <li>
+              <strong>Version Control:</strong> Managing code across multiple technologies and team members using Git.
+              <div class="small">Example: Use branches for features, review code via pull requests, and resolve merge conflicts early to keep the repo stable.</div>
+            </li>
+          </ul>
+          <p>
+            These challenges are common because full stack development requires coordination between many moving parts. 
+            For example, an API change on the backend may require updates to the frontend form validation, and a slow database query 
+            could make the UI feel unresponsive even if the frontend code is optimized. Developing with a clear plan, strong testing, 
+            and good communication between team members helps prevent these issues.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Full Stack Developer's Common Tech Stack</h3>
+          <div class="code-block">
+<strong>MERN Stack (Most Popular for Learning):</strong><br/>
+- MongoDB: NoSQL database<br/>
+- Express: Backend framework<br/>
+- React: Frontend framework<br/>
+- Node.js: JavaScript runtime<br/>
+<br/>
+<strong>LAMP Stack (Traditional):</strong><br/>
+- Linux: Operating system<br/>
+- Apache: Web server<br/>
+- MySQL: Database<br/>
+- PHP: Backend language<br/>
+<br/>
+<strong>Python Full Stack:</strong><br/>
+- Django: Backend framework (all-in-one)<br/>
+- React/Vue: Frontend<br/>
+- PostgreSQL: Database
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Aayush Niure | Junior Full Stack Developer Portfolio</p>
+  </footer>
+</body>
+</html>

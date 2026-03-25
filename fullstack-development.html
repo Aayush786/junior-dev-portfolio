@@ -111,12 +111,13 @@
           <h3>The Journey as a Junior Developer</h3>
           <p>
             As a junior full stack developer, you're building a foundation across all layers. You may not be an expert 
-            in everything, but understanding how HTML, CSS, JavaScript, and backend concepts work together is essential.
+            in everything, but understanding how HTML, CSS, JavaScript, PHP, and backend concepts work together is essential.
           </p>
           <p>
             The following sections demonstrate my understanding of the frontend technologies (HTML, CSS, Bootstrap, and JavaScript) 
             which are crucial components of the full stack development journey. These skills form the foundation for building 
-            effective user interfaces that communicate with backend systems.
+            effective user interfaces that communicate with backend systems, while the PHP section shows how server-side 
+            processing integrates with frontend applications.
           </p>
         </div>
 
@@ -127,7 +128,7 @@
             1. <strong>Frontend (User Interaction):</strong> User fills registration form (HTML), styled beautifully (CSS), 
             validates before submission (JavaScript), responsive on mobile (Bootstrap)<br><br>
             2. <strong>Communication:</strong> JavaScript sends form data to backend API via AJAX/Fetch<br><br>
-            3. <strong>Backend (Server Processing):</strong> Node.js/Python receives request, validates data, hashes password, creates user record<br><br>
+            3. <strong>Backend (Server Processing):</strong> Node.js/Python/PHP receives request, validates data, hashes password, creates user record<br><br>
             4. <strong>Database (Data Persistence):</strong> New user stored in MongoDB/PostgreSQL with timestamp<br><br>
             5. <strong>Response Flow:</strong> Backend sends confirmation, frontend JavaScript displays success message, 
             user redirected to login page
@@ -190,6 +191,75 @@
 - React/Vue: Frontend<br/>
 - PostgreSQL: Database
           </div>
+        </div>
+
+        <div class="card">
+          <h3>PHP in Full Stack Development</h3>
+          <p>
+            PHP (Hypertext Preprocessor) is a popular server-side scripting language that powers many websites and web applications.
+            As part of the traditional LAMP stack, PHP handles backend logic, database interactions, and server-side processing.
+          </p>
+
+          <div class="two-column">
+            <div>
+              <h4 style="color: var(--primary); margin-top: 0;">PHP's Role in Full Stack</h4>
+              <ul class="feature-list">
+                <li>Server-side form processing and validation</li>
+                <li>Database connectivity and queries</li>
+                <li>Session management and authentication</li>
+                <li>Dynamic content generation</li>
+                <li>API development for frontend communication</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 style="color: var(--primary); margin-top: 0;">PHP Integration with Frontend</h4>
+              <ul class="feature-list">
+                <li>Processes AJAX requests from JavaScript</li>
+                <li>Generates JSON responses for SPAs</li>
+                <li>Handles file uploads and processing</li>
+                <li>Implements server-side rendering</li>
+                <li>Manages user authentication flows</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="highlight-box">
+            <strong>PHP Example: User Registration API</strong><br><br>
+            <code style="color: var(--primary);">
+&lt;?php<br/>
+header('Content-Type: application/json');<br/>
+<br/>
+// Get POST data from frontend<br/>
+$data = json_decode(file_get_contents('php://input'), true);<br/>
+<br/>
+// Validate input<br/>
+if (!isset($data['email']) || !isset($data['password'])) {<br/>
+    echo json_encode(['success' => false, 'message' => 'Missing required fields']);<br/>
+    exit;<br/>
+}<br/>
+<br/>
+// Connect to database<br/>
+$conn = new mysqli('localhost', 'user', 'password', 'database');<br/>
+<br/>
+// Hash password and insert user<br/>
+$hashedPassword = password_hash($data['password'], PASSWORD_DEFAULT);<br/>
+$stmt = $conn->prepare('INSERT INTO users (email, password) VALUES (?, ?)');<br/>
+$stmt->bind_param('ss', $data['email'], $hashedPassword);<br/>
+<br/>
+if ($stmt->execute()) {<br/>
+    echo json_encode(['success' => true, 'message' => 'User registered successfully']);<br/>
+} else {<br/>
+    echo json_encode(['success' => false, 'message' => 'Registration failed']);<br/>
+}<br/>
+?&gt;
+            </code>
+          </div>
+
+          <p>
+            This PHP script demonstrates how backend code processes frontend requests, validates data, interacts with databases,
+            and returns responses that JavaScript can handle to update the user interface dynamically.
+          </p>
         </div>
       </section>
     </div>
